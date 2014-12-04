@@ -5,19 +5,32 @@ function onDeviceReady() {
 	// var data = JSON.parse(localStorage.getItem("todoData"));
 	// localStorage.setItem("todoData", JSON.stringify(data));
 	
-	if (localStorage['signSt'] != "1") {
-	
-		$( "#homeContent" ).load( "../home.html", function() {
+	if (typeof (window.localStorage) !== "undefined") {
+            localStorage.setItem('lastname', "Smith");
 
-	});
 
-	}else{
+            
+                
+					if (localStorage.getItem('signSt') != null || localStorage.getItem('signSt') != undefined) {
 	
-		$( "#homeContent" ).load( "../signup.html", function() {
+						$( "#homeContent" ).load( "../home.html", function() {
 
-	});
+					});
+
+					}else{
+					
+						$( "#homeContent" ).load( "../signup.html", function() {
+
+					});
+					
+					}
 	
-	}
+            
+
+
+        }
+	
+
 
 }
 
