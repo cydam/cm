@@ -2,36 +2,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     // we will not be doing anything!!
-	// var data = JSON.parse(localStorage.getItem("todoData"));
-	// localStorage.setItem("todoData", JSON.stringify(data));
-	
-	if (typeof (window.localStorage) !== "undefined") {
-            localStorage.setItem('lastname', "Smith");
-
-
-            
-                
-					if (localStorage.getItem('signSt') != null || localStorage.getItem('signSt') != undefined) {
-	
-						$( "#homeContent" ).load( "../home.html", function() {
-
-					});
-
-					}else{
-					
-						$( "#homeContent" ).load( "../signup.html", function() {
-
-					});
-					
-					}
-	
-            
-
-
-        }
-	
-
-
 }
 
 $(document).on("pageshow", function () {
@@ -47,8 +17,6 @@ $(document).on("pageshow", function () {
         navigator.contacts.find(filter, onSuccess, onError, options);
     } else if ($("#addContact").length == 1) {
         bindAddContactEvents();
-    } else if ($("#signUp").length == 1) {
-        fnSignUp();
     }
 });
 
@@ -114,20 +82,6 @@ function bindAddContactEvents() {
         contact.phoneNumbers = phoneNumbers;
 
         contact.save(createSuccess, createError);
-    });
-}
-
-function fnSignUp() {
-    $("#signUp").on("click", function () {
-        var supmail = $.trim($("#sup").val());
-
-        if (supmail.length == 0) {
-            alert("Please enter a valid E-mail");
-            return false;
-        }else{
-		    alert(supmail);
-		}
-		
     });
 }
 
