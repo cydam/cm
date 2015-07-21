@@ -2,7 +2,7 @@
 <widget id="com.d4L.SearchContactsAPI" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Contact Manager Pro</name>
     <description>
-        You can't lose your contacts anymore. Synchronize between android, iPhone, windows phone, Lumia, manage contacts from any single unit and print out contacts
+        You shouldn't lose your contacts any more. Synchronize between android, iPhone, windows phone, Lumia, computer; manage contacts from any single unit and print out contacts in hard copies.
     </description>
     <author email="support@developers4life.com" href="http://www.developers4life.com">
         d4L
